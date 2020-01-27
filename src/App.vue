@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Side />
+    <Main />
   </div>
 </template>
 
 <script>
 import Side from './components/Side.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'app',
   components: {
-    Side
+    Side,
+    Main
   }
 }
 </script>
