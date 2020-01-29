@@ -25,6 +25,7 @@ aside {
     border-radius: 2px;
     padding: 30px 20px;
     margin-left: 50px;
+    float: left;
 }
 
 aside strong {

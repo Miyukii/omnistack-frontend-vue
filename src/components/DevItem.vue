@@ -29,6 +29,7 @@
         box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
         border-radius: 2px;
         padding: 20px;
+        margin-right: 10px;
     }
 
     li.dev-item header img {

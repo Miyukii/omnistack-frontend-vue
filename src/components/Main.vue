@@ -1,7 +1,7 @@
 <template>
     <main>
-        <ul v-for="dev of devs" v-bind:key="dev.id">
-            <DevItem dev={{dev}}/>
+        <ul>
+            <DevItem v-for="dev of devs" v-bind:key="dev.id" :dev="dev"></DevItem>
         </ul>
     </main>
 </template>
@@ -17,7 +17,8 @@
         },
         data() {
             return {
-                devs: []
+                devs: [],
+                errors: []
             }
         },
         async created () {
@@ -25,10 +26,28 @@
             .then(response => {
                 this.devs = response.data;
             })
-            .catch(e => {
-                console.log(e);
-            })
         }
-        
+
     }
 </script>
+
+<style>
+  main {
+    flex: 1;
+  }
+
+  main ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    text-align: start;
+  }
+
+
+  @media (max-width: 650px){
+    main ul {
+        grid-template-columns: 1fr;
+    }
+  }
+</style>
